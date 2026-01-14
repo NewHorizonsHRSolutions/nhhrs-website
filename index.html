@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Horizons HR Solutions</title>
+  <meta name="description" content="Remote HR consulting with UK expertise by Jeanette Dean. Empowering businesses with compliant, compassionate, and modern HR solutions.">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="theme-color" content="#1d1d1d">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand-black:#1d1d1d;
+      --brand-yellow:#ffcc00;
+      --brand-yellow-2:#f4c430;
+      --paper:#fff8dc;
+      --paper-2:#fff0b3;
+      --text:#222;
+      --muted:#555;
+      --card:#ffffff;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      font-family:'Open Sans', sans-serif;
+      margin:0;
+      background:linear-gradient(180deg, var(--paper), #ffffff 60%);
+      color:var(--text);
+      line-height:1.55;
+    }
+
+    /* Header */
+    header{
+      background: radial-gradient(1200px 400px at 50% -20%, rgba(255,204,0,.35), transparent 60%),
+                  linear-gradient(180deg, var(--brand-black), #000000);
+      color:var(--brand-yellow);
+      padding: 2.25rem 1.25rem 1.75rem;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    header .brand{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+    header img{
+      width:92px;
+      height:auto;
+      border-radius:14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+      background:#fff;
+    }
+    header h1{
+      margin:0;
+      font-size: clamp(1.6rem, 3vw, 2.25rem);
+      letter-spacing:.2px;
+    }
+    header p{
+      margin:.35rem 0 0;
+      color: rgba(255,204,0,.9);
+      font-weight:600;
+    }
+
+    /* Nav */
+    nav{
+      background: linear-gradient(90deg, var(--brand-yellow-2), var(--brand-yellow));
+      padding: .85rem 1rem;
+      text-align:center;
+      position:sticky;
+      top:0;
+      z-index:10;
+      box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    }
+    nav a{
+      color:var(--brand-black);
+      margin:0 .8rem;
+      text-decoration:none;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    nav a:hover{ text-decoration:underline; }
+
+    /* Layout */
+    .wrap{ max-width: 1040px; margin: 0 auto; padding: 0 1.25rem; }
+    section{ padding: 2.4rem 0; }
+    h2{ margin:0 0 .75rem; font-size:1.6rem; }
+    .muted{ color:var(--muted); }
+
+    /* Hero */
+    .hero{
+      background: linear-gradient(180deg, var(--paper-2), #ffffff);
+      padding: 3.2rem 0 2.2rem;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.3fr .9fr;
+      gap: 1.25rem;
+      align-items:stretch;
+    }
+    .hero h1{
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin:0 0 .75rem;
+      letter-spacing:-.2px;
+    }
+    .hero p{ margin:0 0 1.25rem; font-size:1.05rem; }
+    .cta{
+      display:flex;
+      gap:.75rem;
+      flex-wrap:wrap;
+      margin-top: 1rem;
+    }
+    .btn{
+      display:inline-block;
+      padding:.85rem 1.05rem;
+      border-radius: 999px;
+      font-weight:800;
+      text-decoration:none;
+      border:2px solid var(--brand-black);
+      transition: transform .08s ease, box-shadow .08s ease;
+      box-shadow: var(--shadow);
+      background:#fff;
+      color: var(--brand-black);
+    }
+    .btn.primary{
+      background: var(--brand-black);
+      color: var(--brand-yellow);
+      border-color: var(--brand-black);
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .card{
+      background:var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.25rem 1.25rem 1.1rem;
+      border: 1px solid rgba(0,0,0,.06);
+    }
+    .quick-facts{
+      display:grid;
+      gap:.9rem;
+      height:100%;
+    }
+    .fact{
+      border-left: 6px solid var(--brand-yellow);
+      padding-left: .9rem;
+    }
+    .fact strong{ display:block; }
+
+    /* Services */
+    .services-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .service{
+      padding: 1.2rem 1.15rem;
+      border-radius: var(--radius);
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.06);
+      box-shadow: var(--shadow);
+    }
+    .service h3{ margin:.1rem 0 .35rem; font-size:1.05rem; }
+    .service p{ margin:0; color:var(--muted); }
+
+    /* About + Contact */
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items:start;
+    }
+    .list{
+      margin:.6rem 0 0;
+      padding-left: 1.1rem;
+    }
+    .list li{ margin:.35rem 0; }
+
+    /* Footer */
+    footer{
+      background: var(--brand-black);
+      color: rgba(255,204,0,.92);
+      text-align:center;
+      padding: 2rem 1.25rem;
+      margin-top: 2.5rem;
+    }
+    footer a{ color: var(--brand-yellow); }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .services-grid{ grid-template-columns: 1fr; }
+      .two-col{ grid-template-columns: 1fr; }
+      nav a{ display:inline-block; margin:.25rem .6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="/assets/nhhrs-logo.jpg" alt="New Horizons HR Solutions logo">
+      <div>
+        <h1>New Horizons HR Solutions</h1>
+        <p>Remote HR Expertise | UK Compliance | People-First Culture</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="card">
+          <h1>Future‑focused HR, rooted in compliance.</h1>
+          <p class="muted">Led by <strong>Jeanette Dean</strong>, a UK HR specialist with 25+ years’ multi‑sector experience, we deliver strategic, compliant and human‑centred HR solutions for modern businesses — remotely, reliably and ready for scale.</p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Book a Discovery Call</a>
+            <a class="btn" href="#services">Explore Services</a>
+          </div>
+          <p class="muted" style="margin-top:1rem;font-size:.95rem;">Operating remotely between the UK and Türkiye • UK employment law expertise • Pragmatic, outcomes‑driven delivery</p>
+        </div>
+
+        <div class="quick-facts">
+          <div class="card fact">
+            <strong>Risk‑smart compliance</strong>
+            Policies, contracts and ER support designed to reduce tribunal exposure and protect the brand.
+          </div>
+          <div class="card fact">
+            <strong>Remote‑first delivery</strong>
+            Fast turnaround, clear comms, and tools that keep stakeholders aligned across time zones.
+          </div>
+          <div class="card fact">
+            <strong>Commercially grounded</strong>
+            HR that works in the real world — balancing people needs with operational realities.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap two-col">
+        <div class="card">
+          <h2>About Jeanette</h2>
+          <p class="muted">Jeanette Dean is the founder of New Horizons HR Solutions. She partners with UK‑based SMEs and scaling teams to strengthen HR foundations, navigate complex employee relations and build people practices that drive performance and engagement.</p>
+          <ul class="list">
+            <li>Organisation change & culture transformation</li>
+            <li>Employee relations & case management</li>
+            <li>Policies, handbooks, and compliance frameworks</li>
+            <li>Process design, HR ops, and HRIS enablement</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Why clients choose NHHR</h2>
+          <p class="muted">You get senior‑level HR capability without the overhead. Clear advice, decisive documentation, and a partner who can challenge constructively when it matters.</p>
+          <ul class="list">
+            <li>Speed + accuracy (templates tailored to your business)</li>
+            <li>Stakeholder‑ready messaging (managers, leaders, employees)</li>
+            <li>Practical solutions that protect culture and compliance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <h2>Services</h2>
+        <p class="muted">Modular support or retained partnership — designed to plug into your business quickly.</p>
+
+        <div class="services-grid">
+          <div class="service">
+            <h3>UK Employment Law Compliance</h3>
+            <p>Contracts, policies, audits, and tribunal‑risk mitigation delivered with precision.</p>
+          </div>
+          <div class="service">
+            <h3>Employee Relations</h3>
+            <p>Disciplinary, grievance, absence, performance, restructuring — end‑to‑end case support.</p>
+          </div>
+          <div class="service">
+            <h3>Remote Workforce Management</h3>
+            <p>Onboarding, engagement and manager toolkits that work for distributed teams.</p>
+          </div>
+          <div class="service">
+            <h3>HR Documentation</h3>
+            <p>Handbooks, letters, templates, PIPs, settlement support, and compliant processes.</p>
+          </div>
+          <div class="service">
+            <h3>Leadership & Wellbeing</h3>
+            <p>Culture, wellbeing frameworks, and pragmatic interventions that reduce churn.</p>
+          </div>
+          <div class="service">
+            <h3>Workshops & Training</h3>
+            <p>Manager coaching, ER confidence, policy roll‑outs, and people‑skills capability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap two-col">
+        <div class="card">
+          <h2>Let’s talk</h2>
+          <p class="muted">If you want HR that is compliant, commercial and genuinely people‑centric, let’s book a call and map the quickest path to impact.</p>
+          <ul class="list">
+            <li><strong>Email:</strong> <a href="mailto:jeanette@newhorizonshrsolutions.com">jeanette@newhorizonshrsolutions.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jeanettedean-hrleader" target="_blank" rel="noopener">Jeanette Dean</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Quick start</h2>
+          <p class="muted"><strong>Typical first steps:</strong></p>
+          <ul class="list">
+            <li>30‑minute discovery call</li>
+            <li>Rapid HR health‑check (policies, risk, priorities)</li>
+            <li>90‑day action plan with clear deliverables</li>
+          </ul>
+          <p class="muted" style="margin-top:.9rem;">Want a simple booking link added next? Tell me your preferred tool (Calendly / Microsoft Bookings / Google Calendar) and I’ll wire it in.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 New Horizons HR Solutions | Designed for impact, delivered with integrity.</p>
+  </footer>
+
+</body>
+</html>
